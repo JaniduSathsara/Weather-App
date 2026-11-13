@@ -20,3 +20,11 @@ function btnSearch() {
     let userlocation = document.getElementById("txtLocation").value;
     loadWeatherinfo(userlocation);
 }
+
+navigator.geolocation.getCurrentPosition((location)=>{
+    console.log(location.coords.latitude);
+    console.log(location.coords.longitude);
+
+    loadWeatherinfo(location.coords.latitude+","+location.coords.longitude)
+    
+})
