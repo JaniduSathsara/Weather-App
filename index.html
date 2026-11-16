@@ -6,37 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+
 
 </head>
 
 <body>
-    <h1>weather</h1>
 
-    <div class="card container" style="max-width: 320px;">
-        <div class="card-body">
-            <input id="txtLocation" type="text" placeholder="Enter Your Location">
-            <button onclick="btnSearch()">Search</button>
+    <div>
+        <table border="0">
+            <tr>
+                <td>
+                    <img src="images/logo.png" alt="logo" width="70px">
+                    <h3>Weather app</h3>
+                    <p>Check weather anywehere</p>
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter your Location">
+                    <button>Select on map</button>
+                </td>
+            </tr>
+            <tr>
+            
+            </tr>
+        </table>
 
-        </div>
-    </div>
 
-<br>
-
-    <div class="card">
-        <div id="lblWeather" class="crd-body">
-            <!-- <h1>Location</h1>
+        <div class="card">
+            <div id="lblWeather" class="crd-body">
+                <!-- <h1>Location</h1>
             <img src="" alt="" srcset="">
             <h3>text</h3>
             <p></p> -->
+            </div>
         </div>
-    </div>
 
-    <script src="script.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
-        crossorigin="anonymous"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>
