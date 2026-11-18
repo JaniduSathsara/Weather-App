@@ -26,10 +26,17 @@
 //     console.log(location.coords.longitude);
 
 //     loadWeatherinfo(location.coords.latitude+","+location.coords.longitude)
-    
+
 // })
 
 function map() {
+    window.open(
+        "https://www.google.com/maps",
+        "GoogleMap",
+        "width=800,height=600"
+    );
+
     console.log("hi");
-    
 }
+
+
