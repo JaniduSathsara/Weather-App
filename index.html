@@ -11,39 +11,43 @@
 </head>
 
 <body>
-
-    <div>
+    <div class="mainCard">
         <table>
             <tr>
                 <td>
-                    <img class="logo" src="images/logo.png" alt="logo" width="70px">
-                    <h3 class="headline">Weather app</h3>
-                    <p class="txts">Check weather anywehere</p>
+                    <div class="LogoCard">
+                        <img class="logo" src="images/logo.png" alt="logo" width="70px">
+                        <h3 class="headline">Weather app</h3>
+                        <p class="txts">Check weather anywehere</p>
+                    </div>
                 </td>
                 <td>
-                    <input class="inputtext" type="text" placeholder="Enter your Location">
-                    <button class="btnSearch" onclick="btnSearch()">Search</button>
-                    <img class="mapSymbol" onclick="map()" on src="images/mapSymbol.png" width="25px">
-                    
-                    <div class="DateTime">
-                        card with
-                        date & time
+                    <div class="detailsCard">
+                        <div class="inputCard">
+                            <input class="inputtext" type="text" placeholder="Enter your Location">
+                            <button class="btnSearch" onclick="btnSearch()">Search</button>
+                            <img class="mapSymbol" onclick="map()" on src="images/mapSymbol.png" width="25px">
+                        </div>
+                        <div class="DateTime">
+                            card with
+                            date & time
 
-                    </div>
-                    <div>
-                        <table>
-                            <tr>
-                                <td>
-                                    <img class="wIcone" src="images/logo.png" alt="weather icon" width="90px">
-                                </td>
-                                <td>
-                                    <h5 class="Wlocation">seleceted location</h5>
-                                    <h5 class="wType">weather type</h5>
-                                    <h2 class="wTemp">temp</h2>
-                                    <h6>feels like</h6>
-                                </td>
-                            </tr>
-                        </table>
+                        </div>
+                        <div class="miniDetailsCad">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img class="wIcone" src="images/logo.png" alt="weather icon" width="90px">
+                                    </td>
+                                    <td>
+                                        <h5 class="Wlocation">seleceted location</h5>
+                                        <h5 class="wType">weather type</h5>
+                                        <h2 class="wTemp">temp</h2>
+                                        <h6>feels like</h6>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </td>
             </tr>
@@ -53,40 +57,43 @@
         <div>
             <h3 class="day5Title">5 day forcast</h3>
         </div>
-        <table>
-            <tr>
-                <td>
-                    <h5 class="Ddate">date 1</h5>
-                    <img class="dIcon" src="images/logo.png" alt="" width="30px">
-                    <h5 class="dTemp">temp</h5>
-                    <h5>weather type</h5>
-                </td>
-                <td>
-                    <h5>date 2</h5>
-                    <img src="images/logo.png" alt="" width="30px">
-                    <h5>temp</h5>
-                    <h5>weather type</h5>
-                </td>
-                <td>
-                    <h5>date 3</h5>
-                    <img src="images/logo.png" alt="" width="30px">
-                    <h5>temp</h5>
-                    <h5>weather type</h5>
-                </td>
-                <td>
-                    <h5>date 4</h5>
-                    <img src="images/logo.png" alt="" width="30px">
-                    <h5>temp</h5>
-                    <h5>weather type</h5>
-                </td>
-                <td>
-                    <h5>date 5</h5>
-                    <img src="images/logo.png" alt="" width="30px">
-                    <h5>temp</h5>
-                    <h5>weather type</h5>
-                </td>
-            </tr>
-        </table>
+        <div class="DaysCard">
+            <table>
+                <tr>
+                    <td>
+                        <h5 class="Ddate">date 1</h5>
+                        <img class="dIcon" src="images/logo.png" alt="" width="30px">
+                        <h5 class="dTemp">temp</h5>
+                        <h5>weather type</h5>
+                    </td>
+                    <td>
+                        <h5>date 2</h5>
+                        <img src="images/logo.png" alt="" width="30px">
+                        <h5>temp</h5>
+                        <h5>weather type</h5>
+                    </td>
+                    <td>
+                        <h5>date 3</h5>
+                        <img src="images/logo.png" alt="" width="30px">
+                        <h5>temp</h5>
+                        <h5>weather type</h5>
+                    </td>
+                    <td>
+                        <h5>date 4</h5>
+                        <img src="images/logo.png" alt="" width="30px">
+                        <h5>temp</h5>
+                        <h5>weather type</h5>
+                    </td>
+                    <td>
+                        <h5>date 5</h5>
+                        <img src="images/logo.png" alt="" width="30px">
+                        <h5>temp</h5>
+                        <h5>weather type</h5>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
     </div>
 
 
