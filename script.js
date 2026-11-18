@@ -28,3 +28,8 @@
 //     loadWeatherinfo(location.coords.latitude+","+location.coords.longitude)
     
 // })
+
+function map() {
+    console.log("hi");
+    
+}

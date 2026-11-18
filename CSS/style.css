@@ -1,66 +1,38 @@
-body{
+body {
     background: #6ba7df;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin:1cm;
-    padding:1cm;
+    margin: 1cm;
+    padding: 1cm;
     color: aliceblue;
     align-items: center;
 }
 
-.logo{
+.logo {}
 
-}
+.headline {}
 
+.txts {}
 
-.headline{
+.inputtext {}
 
-}
+.DateTime {}
 
-.txts{
+.btnSearch {}
 
-}
+.mapSymbol {}
 
-.inputtext{
+.wIcone {}
 
-}
+.Wlocation {}
 
-.DateTime{
-    
-}
+.wType {}
 
-.btn{
-    
-}
+.wTemp {}
 
-.wIcone{
+.day5Title {}
 
-}
+.Ddate {}
 
-.Wlocation{
+.dIcon {}
 
-}
-
-.wType{
-
-}
-
-.wTemp{
-
-}
-
-.day5Title{
-
-}
-
-.Ddate{
-
-}
-
-.dIcon{
-
-}
-
-.dTemp{
-
-}
-
+.dTemp {}
