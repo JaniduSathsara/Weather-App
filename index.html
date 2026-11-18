@@ -24,7 +24,7 @@
                 <td>
                     <div class="detailsCard">
                         <div class="inputCard">
-                            <input class="inputtext" type="text" placeholder="Enter your Location">
+                            <input id="txtLocation" class="inputtext" type="text" placeholder="Enter your Location">
                             <button class="btnSearch" onclick="btnSearch()">Search</button>
                             <img class="mapSymbol" onclick="map()" on src="images/mapSymbol.png" width="25px">
                         </div>
@@ -33,8 +33,8 @@
                             date & time
 
                         </div>
-                        <div class="miniDetailsCad">
-                            <table>
+                        <div id="lblFullWeather" class="miniDetailsCad">
+                            <!-- <table>
                                 <tr>
                                     <td>
                                         <img class="wIcone" src="images/logo.png" alt="weather icon" width="90px">
@@ -46,7 +46,7 @@
                                         <h6>feels like</h6>
                                     </td>
                                 </tr>
-                            </table>
+                            </table> -->
                         </div>
                     </div>
                 </td>
@@ -57,8 +57,8 @@
         <div>
             <h3 class="day5Title">5 day forcast</h3>
         </div>
-        <div class="DaysCard">
-            <table>
+        <div id="lbl5days" class="DaysCard">
+            <!-- <table>
                 <tr>
                     <td>
                         <h5 class="Ddate">date 1</h5>
@@ -92,19 +92,9 @@
                     </td>
                 </tr>
 
-            </table>
+            </table> -->
         </div>
     </div>
-
-
-    <!-- <div>
-        <div id="lblWeather">
-            <h1>Location</h1>
-            <img src="" alt="" srcset="">
-            <h3>text</h3>
-            <p></p> 
-        </div>
-    </div> -->
 
     <script src="script.js"></script>
 </body>
