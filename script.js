@@ -10,7 +10,7 @@ function loadWeatherinfo(location) {
                 <tr>
                     <td>
                         <h5 class="Ddate">${userlocation}</h5>
-                        <img class="dIcon" src="" alt="" width="30px">
+                        <img class="dIcon" src="${userlocation}" alt="" width="30px">
                         <h5 class="dTemp">${userlocation}</h5>
                         <h5>${userlocation}</h5>
                     </td>
@@ -47,13 +47,13 @@ function loadWeatherinfo(location) {
                <table>
                     <tr>
                         <td>
-                            <img class="wIcone" src="${userlocation}" alt="weather icon" width="90px">
+                            <img class="wIcone" src="${data.current.condition.icon}" alt="weather icon" width="90px">
                         </td>
                         <td>
                             <h5 class="Wlocation">${userlocation}</h5>
-                            <h5 class="wType">${userlocation}</h5>
-                            <h2 class="wTemp">${userlocation}</h2>
-                            <h6>${userlocation}</h6>
+                            <h5 class="wType">${data.current.condition.text}</h5>
+                            <h2 class="wTemp">${data.current.temp_c}</h2>
+                            <h6>${data.location.localtime}</h6>
                         </td>
                     </tr>
                 </table>
@@ -66,6 +66,8 @@ function btnSearch() {
     let userlocation = document.getElementById("txtLocation").value;
     loadWeatherinfo(userlocation);
 }
+
+data.current.condition.icon
 
 // navigator.geolocation.getCurrentPosition((location)=>{
 //     console.log(location.coords.latitude);
