@@ -1,48 +1,8 @@
 
-function loadWeatherinfo(location) {
-    fetch("https://api.weatherapi.com/v1/current.json?key=826898a2aef743548dc92142261311&q=Panadura")
+function loadWeatherinfo(userlocation) {
+    fetch("https://api.weatherapi.com/v1/current.json?key=826898a2aef743548dc92142261311&q="+userlocation)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
-            let userlocation = document.getElementById("txtLocation").value;
-            document.getElementById("lbl5days").innerHTML = `
-            <table>
-                <tr>
-                    <td>
-                        <h5 class="Ddate">${userlocation}</h5>
-                        <img class="dIcon" src="${userlocation}" alt="" width="30px">
-                        <h5 class="dTemp">${userlocation}</h5>
-                        <h5>${userlocation}</h5>
-                    </td>
-                    <td>
-                        <h5 class="Ddate">${userlocation}</h5>
-                        <img class="dIcon" src="" alt="" width="30px">
-                        <h5 class="dTemp">${userlocation}</h5>
-                        <h5>${userlocation}</h5>
-                    </td>
-                    <td>
-                        <h5 class="Ddate">${userlocation}</h5>
-                        <img class="dIcon" src="" alt="" width="30px">
-                        <h5 class="dTemp">${userlocation}</h5>
-                        <h5>${userlocation}</h5>
-                    </td>
-                    <td>
-                        <h5 class="Ddate">${userlocation}</h5>
-                        <img class="dIcon" src="" alt="" width="30px">
-                        <h5 class="dTemp">${userlocation}</h5>
-                        <h5>${userlocation}</h5>
-                    </td>
-                    <td>
-                        <h5 class="Ddate">${userlocation}</h5>
-                        <img class="dIcon" src="" alt="" width="30px">
-                        <h5 class="dTemp">${userlocation}</h5>
-                        <h5>${userlocation}</h5>
-                    </td>
-                    
-                </tr>
-
-            </table>
-            `
             document.getElementById("lblFullWeather").innerHTML = `
                <table>
                     <tr>
@@ -50,15 +10,20 @@ function loadWeatherinfo(location) {
                             <img class="wIcone" src="${data.current.condition.icon}" alt="weather icon" width="90px">
                         </td>
                         <td>
-                            <h5 class="Wlocation">${userlocation}</h5>
+                            <h5 class="Wlocation">${data.location.name}</h5>
                             <h5 class="wType">${data.current.condition.text}</h5>
-                            <h2 class="wTemp">${data.current.temp_c}</h2>
+                            <h2 class="wTemp">${data.current.temp_c} °C</h2>
                             <h6>${data.location.localtime}</h6>
                         </td>
                     </tr>
                 </table>
             `
+            document.getElementById("lblData").innerHTML = `
+                <h4>${data.location.country}</h4>
+            
+            `
         })
+        document.getElementById("txtLocation").value = ""
 
 }
 
@@ -67,7 +32,7 @@ function btnSearch() {
     loadWeatherinfo(userlocation);
 }
 
-data.current.condition.icon
+// data.current.condition.icon
 
 // navigator.geolocation.getCurrentPosition((location)=>{
 //     console.log(location.coords.latitude);
@@ -86,5 +51,6 @@ function map() {
 
     console.log("hi");
 }
+
 
 
