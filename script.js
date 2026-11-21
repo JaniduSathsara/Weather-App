@@ -1,6 +1,5 @@
-
 function loadWeatherinfo(userlocation) {
-    fetch("https://api.weatherapi.com/v1/current.json?key=826898a2aef743548dc92142261311&q="+userlocation)
+    fetch("https://api.weatherapi.com/v1/current.json?key=826898a2aef743548dc92142261311&q=" + userlocation)
         .then(res => res.json())
         .then(data => {
             document.getElementById("lblFullWeather").innerHTML = `
@@ -23,7 +22,7 @@ function loadWeatherinfo(userlocation) {
             
             `
         })
-        document.getElementById("txtLocation").value = ""
+    document.getElementById("txtLocation").value = ""
 
 }
 
@@ -41,16 +40,6 @@ function btnSearch() {
 //     loadWeatherinfo(location.coords.latitude+","+location.coords.longitude)
 
 // })
-
-function map() {
-    window.open(
-        "https://www.google.com/maps",
-        "GoogleMap",
-        "width=800,height=600"
-    );
-
-    console.log("hi");
-}
 
 
 
