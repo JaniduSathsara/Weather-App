@@ -33,13 +33,13 @@ function btnSearch() {
 
 // data.current.condition.icon
 
-// navigator.geolocation.getCurrentPosition((location)=>{
-//     console.log(location.coords.latitude);
-//     console.log(location.coords.longitude);
+navigator.geolocation.getCurrentPosition((location)=>{
+    console.log(location.coords.latitude);
+    console.log(location.coords.longitude);
 
-//     loadWeatherinfo(location.coords.latitude+","+location.coords.longitude)
+    loadWeatherinfo(location.coords.latitude+","+location.coords.longitude)
 
-// })
+})
 
 
 
