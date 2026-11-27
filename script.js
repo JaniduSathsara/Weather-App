@@ -1,3 +1,4 @@
+document.getElementById("map").style.display = "none";
 function loadWeatherinfo(userlocation) {
     fetch("https://api.weatherapi.com/v1/current.json?key=826898a2aef743548dc92142261311&q=" + userlocation)
         .then(res => res.json())
@@ -49,6 +50,38 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 
-function btnMap(){
-    
+function btnMap() {
+    document.getElementById("map").style.display = "block";
+    setTimeout(function () {
+        document.getElementById("map").style.display = "none";
+    }, 45000);
+
 }
+
+let marker;
+
+map.on("click", async function (e) {
+
+    if (marker) {
+        map.removeLayer(marker);
+    }
+
+    marker = L.marker(e.latlng).addTo(map);
+
+    let lat = e.latlng.lat;
+    let lng = e.latlng.lng;
+
+    let response = await fetch(
+        `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lng}`
+    );
+
+    let data = await response.json();
+
+    let locationName = data.address.city;
+
+    loadWeatherinfo(lat + "," + lng);
+
+    document.getElementById("txtLocation").value = locationName;
+
+});
+
