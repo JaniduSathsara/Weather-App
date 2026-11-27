@@ -119,7 +119,7 @@ td {
     border-radius: 10%;
     overflow: hidden;
     margin: 15px auto;
-    /* display: none; */
+    display: none;
 }
 
 .DateTime {

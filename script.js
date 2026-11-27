@@ -51,11 +51,13 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 function btnMap() {
-    document.getElementById("map").style.display = "block";
-    setTimeout(function () {
-        document.getElementById("map").style.display = "none";
-    }, 45000);
+    let map = document.getElementById("map");
 
+    if (getComputedStyle(map).display === "none") {
+        map.style.display = "block";
+    } else {
+        map.style.display = "none";
+    }
 }
 
 let marker;
