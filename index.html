@@ -7,6 +7,7 @@
     <title>Weather App</title>
 
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
 </head>
 
@@ -18,44 +19,32 @@
                     <div class="LogoCard">
                         <img class="logo" src="images/logo.png" alt="logo">
                         <h3 class="headline">Weather app</h3>
-                        <p class="txts">Check weather anywehere</p>
+                        <p class="txts">Check weather anywhere</p>
                     </div>
                 </td>
+
                 <td>
                     <div class="detailsCard">
                         <div>
                             <input id="txtLocation" class="inputtext" type="text" placeholder="Enter your Location">
+
                             <button class="btnSearch" onclick="btnSearch()">Search</button>
-                            <img class="mapSymbol" onclick="btnMap()" on src="images/mapSymbol.png" width="25px">
-                            <div id="map"></div>
+
+                            <img class="mapSymbol" onclick="btnMap()" src="images/mapSymbol.png" alt="Map">
                         </div>
+
+                        <div id="map"></div>
+
                         <div id="lblData" class="DateTime"></div>
-                        <div id="lblFullWeather" class="miniDetailsCad">
-                           
-                           <!-- <script>
-                               `<table>
-                                   <tr>
-                                       <td>
-                                           <img class="wIcone" src="images/logo.png" alt="weather icon" width="90px" />
-                                       </td>
-                                       <td>
-                                           <h5 class="Wlocation">${}</h5>
-                                           <h5 class="wType">${}</h5>
-                                           <h2 class="wTemp">${}</h2>
-                                           <h6>${}</h6>
-                                       </td>
-                                   </tr>
-                               </table>`
-                           </script> -->
 
-
-                        </div>
+                        <div id="lblFullWeather" class="miniDetailsCad"></div>
                     </div>
                 </td>
             </tr>
         </table>
     </div>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="script.js"></script>
 
 </body>
